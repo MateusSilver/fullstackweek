@@ -1,6 +1,6 @@
 "use client";
 import { Category } from "@prisma/client";
-import { Badge, HeadphonesIcon, KeyboardIcon, MonitorIcon, MouseIcon, SpeakerIcon, SquareIcon } from "lucide-react";
+import { HeadphonesIcon, KeyboardIcon, MonitorIcon, MouseIcon, SpeakerIcon, SquareIcon } from "lucide-react";
 
 interface CategoryItemProps {
     category: Category;
@@ -18,10 +18,8 @@ const CategoryItem = ({category}:CategoryItemProps) => {
 
     return ( 
         <div className="flex items-center justify-center border-solid border-2 gap-2 rounded-lg py-3">
-            <Badge variant="outline">
-                {categoryIcon[category.slug as keyof typeof categoryIcon]}
-                <span className="text-xs font-bold">{category.name}</span>
-            </Badge>
+            {categoryIcon[category.slug as keyof typeof categoryIcon]}
+            <span className="text-xs font-bold">{category.name}</span>
         </div>
     );
 }
