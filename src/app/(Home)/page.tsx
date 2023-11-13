@@ -21,12 +21,20 @@ export default async function Home() {
     alt="até 55% de desconto esse mês!"
     />
     <div className="mt-8 mx-8">
+    <h2 className="font-semibold my-8 uppercase">Categorias</h2>
       <Categories />
     </div>
     <div className="mt-8">
+      <h2 className="font-semibold mx-8 my-8 uppercase">Ofertas</h2>
       <ProductList products={deals}/>
     </div>
-    
+    <Image src="/banner-home-02.png"
+    height={0}
+    width={0}
+    className="h-auto w-full p-5"
+    sizes="100vw"
+    alt="até 50% de desconto em mouses!"
+    />
     
   </div>;
 }
