@@ -72,7 +72,9 @@ const Header = () => {
                 </SheetContent>
             </Sheet>
 
+            <Link href="/">
             <h1><span className="text-primary">FSW</span> Store</h1>
+            </Link>
             <Sheet>
                 <Button size="icon" variant="outline">
                     <ShoppingCartIcon />
