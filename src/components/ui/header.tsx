@@ -2,10 +2,11 @@
 import { MenuIcon, ShoppingCartIcon, LogInIcon, PercentIcon, ListOrderedIcon, Home, LogOutIcon } from "lucide-react";
 import { Button } from "./button";
 import { Card } from "./card";
-import { Sheet, SheetTrigger, SheetContent, SheetHeader } from "./sheet";
+import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetClose } from "./sheet";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import { Separator } from "./separator";
+import Link from "next/link";
 
 const Header = () => {
     const {status, data} = useSession();
@@ -59,10 +60,14 @@ const Header = () => {
                             <PercentIcon size={16}/>
                             Ofertas
                         </Button>
-                        <Button variant="outline" className="w-full justify-start gap-2">
-                            <ListOrderedIcon size={16}/>
-                            Catalogo
-                        </Button>
+                        <SheetClose asChild>
+                            <Link href={`/catalog`}>
+                                <Button variant="outline" className="w-full justify-start gap-2">
+                                    <ListOrderedIcon size={16}/>
+                                    Catalogo
+                                </Button>
+                            </Link>
+                        </SheetClose>
                     </div>
                 </SheetContent>
             </Sheet>
