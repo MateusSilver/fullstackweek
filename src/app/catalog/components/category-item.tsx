@@ -1,5 +1,5 @@
 import { Category } from "@prisma/client";
-import { Link } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 
 interface CategoryItemProps {
@@ -8,7 +8,7 @@ interface CategoryItemProps {
 
 const CategoryItem = ({category}: CategoryItemProps) => {
     return (
-        <a href={`/category/${category.slug}`}>
+        <Link href={`/category/${category.slug}`}>
             <div className="flex w-[200px] flex-col rounded-md">
                 <div className="rounded-tr-lg rounded-tl-lg h-[150px] flex items-center justify-center bg-gradient-to-r from-[#5033C3] to-purple-300">
                     <Image
@@ -27,7 +27,7 @@ const CategoryItem = ({category}: CategoryItemProps) => {
                     <p className="pl-2 text-sm font-semibold text-center">{category.name}</p>
                 </div>
             </div>
-        </a>
+        </Link>
     );
 }
 
