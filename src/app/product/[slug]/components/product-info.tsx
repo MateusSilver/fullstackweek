@@ -53,7 +53,7 @@ const ProductInfo = ({product: {basePrice,description, discountPercentage, total
                 <h3 className="font-bold">Descrição</h3>
                 <p className="text-sm opacity-60">{description}</p>
             </div>
-            <Button className="mt-8 font-bold uppercase bg-purple-800 hover:bg-purple-500">Adicionar ao Carrinho</Button>
+            <Button className="mt-8 font-bold uppercase bg-purple-800 hover:bg-purple-900">Adicionar ao Carrinho</Button>
             <div className="bg-accent flex px-5 py-2 justify-between w-[400px] rounded-lg my-3">
                 <div className="flex items-center gap-3">
                     <TruckIcon />
