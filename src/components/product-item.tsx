@@ -1,5 +1,4 @@
 import { ProductWithTotalPrice } from "@/helpers/product";
-import { ArrowDownIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import DiscountBadge from "./ui/discount-badge";
